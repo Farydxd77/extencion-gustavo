@@ -1,0 +1,17 @@
+﻿{
+  "manifest_version": 3,
+  "name": "cashimex mod",
+  "version": "1.0",
+  "description": "Inserta botones W1 y CONT1 automáticamente en la página",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "clipboardWrite"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://crm.cashimex.mx/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
