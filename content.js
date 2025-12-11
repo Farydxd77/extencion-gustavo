@@ -71,50 +71,9 @@ async function iniciarAddon() {
 
     
     
-
-
-
-
-
-
-
-//     // BOTÓN WAP
-//     const btnWAP = document.createElement("button"); 
-//     btnWAP.innerText = "WAP";
-//     Object.assign(btnWAP.style, { 
-//         position: "fixed", 
-//         top: "100px", 
-//         right: "20px", 
-//         zIndex: 9999, 
-//         padding: "10px", 
-//         backgroundColor: "#9b59b6", 
-//         color: "#fff", 
-//         border: "none", 
-//         borderRadius: "5px", 
-//         cursor: "pointer" 
-//     });
-//     btnWAP.onclick = () => {
-//         const nombre = getTextAfterLabel("Nombre");
-//         const producto = getTextAfterLabel("Nombre del producto");
-//         const monto = getTextAfterLabel("Monto del contrato");
-//         const importeDiv = [...document.querySelectorAll("div.mb-10")].find(el => el.innerText.trim().startsWith("Importe de la factura de reinversión"));
-//         const importe = importeDiv?.querySelector("span[style*='color: red']")?.textContent.trim() || "";
-
-//         const mensaje = `Hola *${nombre}* Exigimos el pago inmediato TRNSFERENCIA NO DEMORA MAS DE 2 MINUTOS Si no recibimos respuesta, nuestros asesores de zona se pondrán en contacto contigo mediante llamadas y mensajes con usted y CON SUS FAMILIARES Y AMIGOS.*
-// 🚫 Evita que esta situación afecte tus relaciones personales y laborales.
-// **📢 IGNORAR SOLO HARÁ QUE SIGAMOS INSISTIENDO
-
-// *Nombre del producto:* *${producto}* *${monto}*
-// *Importe de la factura de reinversión:* *${importe}*`;
-
-//         navigator.clipboard.writeText(mensaje).then(() => alert("✅ Mensaje WAP copiado!"));
-//     };
-//     document.body.appendChild(btnWAP);
-
-
     
 
-// BOTÓN WAP2
+// PRIMER-CONTACTO
 const btnWAP2 = document.createElement("button"); 
 btnWAP2.innerText = "PRIMER-CONTACTO";
 Object.assign(btnWAP2.style, { 
@@ -176,7 +135,7 @@ btnContWap.onclick = () => {
     const pagoCompletoFactura = getTextAfterLabel("Pago completo de la factura");
     const app = document.querySelector("span.el-tooltip")?.innerText.trim() || "";
     const importeDiv = [...document.querySelectorAll("div.mb-10")].find(el => el.innerText.trim().startsWith("Importe de la factura de reinversión"));
-    const importe = importeDiv?.querySelector("span[style*='color: red']")?.textContent.trim() || "";
+    const importe = importeDiv?.querySelector("span[style*='color: green'], span[style*='color: red']")?.textContent.trim() || "";
 
     const linkApp = "bit.ly/" + app.replace(/\s+/g, "");
 
